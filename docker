@@ -87,7 +87,56 @@
 
 28.	docker container run -d image_name or image_id
 	this command is used to  run or create container with deatach mode it mean container run in back gournd.
-29.		
+29.	sudo docker container run -d -p 5011:80 aamirpinger/helloworld:latest
+	this command will run container in deacttach  '-p' for port number here are '5011' application port and 80 is 		external portal.
+	
+30.	sudo docker container run -d --name docker_apps  -p 5011:80 aamirpinger/helloworld:latest
+	'--name' is used to give custom name 
+
+32.	sudo docker build -t my-first-docker-app .
+	this command is used to create image from local file
+	please note that  '-t'  and '.' at the end of command is parameter 
+	ther should be space between  '.' it must be used if you did not used than it create error.
+	
+33.	sudo docker build -t node-app.image .
+	this command is used to build local node js application
+
+34.	sudo docker push mubasharhussain/node-app.image:latest
+	this command is used to push or publish any local image to docker.hub
+
+
+35.	sudo docker tag old_image_name new_image_name
+	this command is used to rename any docker image  old_name is old and new_name is rename new name
+
+36.	sudo docker image push  mubasharhussain/node-app.image:latest
+	to push docker.hub
+
+37.	sudo docker login -u "username" -p "password" docker.io
+	this command is used to login to docker 
+
+38.	sudo docker history image_name
+	this command is used to check all history of image
+	
+39.	sudo docker inspect image_name
+	this command is used to inspect image
+	
+40.	sudo docker container run -it --name=test-app -v /home/linux/test-app-folder:/test-app-container 
+	aamirpinger/helloworld sh
+	
+	this will bind local folder to docker image first url is local folder and second is last container inside 		folder
+	
+41.	echo test-bind-mount-example > msg.txt
+	create file with  text test-bind-mount-example and file name msg.txt
+	
+42.	sudo docker run -it --name test-app-news -v /home/linux/test-app-folder:/abcxyzfolder aamirpinger/helloworld sh
+	for mount second reposrty 
+	
+
+	
+	
+	 	
+	 	
+		
 	
 
 						
