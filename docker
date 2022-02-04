@@ -1,0 +1,93 @@
+##################### DOCKER INSTALLATION ###################	
+1.	docker run -it ztgrace/changeme /bin/bash
+
+2.	curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor | sudo tee /usr/share/
+	keyrings/docker-archive-keyring.gpg >/dev/null
+	
+3.	echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://
+	download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list
+
+4.	sudo apt-get update
+	update all repo
+
+5.	sudo apt-get remove -y docker docker-engine docker.io
+	install docker 
+
+6.	sudo apt-get install -y docker-ce
+	install docker
+
+7.	sudo docker run hello-world
+	Test docker 
+
+8.	docker --version
+	check docker version
+
+9.	docker info
+	check all information aboute docker engine like up , down container
+
+10.	docker version
+	provide  client side component or server side infromation
+	
+11.	docker image pull nginx:latest
+	to pull official image  nginx latest
+
+12.	docker image pull aamirpinger/helloworld:latest
+	pull lastest image from of unofficial imaage 'latest' is tag of image
+
+13.	sudo docker pull alpine
+	to pull alpine defualt latest image from docker hub official image
+
+14.	sudo docker pull aamirpinger/helloworld:latest
+	to pull un-official image aamirpinger/helloworld with latest tag
+
+15.	sudo docker image ls
+	to list all image of docker 
+
+16.	sudo docker image rm alpine:latest
+	this command will remove alpine with latest tag will removed 
+	
+17.	sudo docker run -it aamirpinger/helloword sh
+	this will run helloword image as container which was loaded on our computer system
+	'-it' stand for iterative mode  which mean convert current screen to docker container 
+	'sh' mean shall or you could use  'bash' file system
+
+18.	#
+	after running above command you will lock  # insteated of $ sign which mean you in container  		structurer
+
+19.	exit 
+	if you run this command in conainer than you go back to OS 		shall	
+	
+
+20.	sudo docker container ls -a 
+	this command will used to list all container running and stop container
+
+21.	Ctrl + P + Q
+	this command is used to exit sh for running container but contain will not stop
+22.	sudo docker ps
+	this will  list all running container
+
+23.	docker ps -a 
+	this will list all running  and stop container
+	
+	
+24.	sudo docker exec -it container_name / ID sh / bash
+	to go interactive mode
+	
+	!Note
+	if you stop an container with 'Ctrl + P+Q' and go again  Interactive Mode than you will see that there will 		try to stop with 'ctrl = P + Q' container will not stop  but you could use 'exit' to exit intractive but at 		this time container will not stoped.
+	
+25.	sudo docker container stop container_id
+	this command is used to stop container 
+	
+26.	sudo docker container start  container_id or container_name
+	this command is used to start already created container with container id or container id
+
+27.	sudo docker container rm  container_id or container_name
+	this command is used to stop the containers
+
+28.	docker container run -d image_name or image_id
+	this command is used to  run or create container with deatach mode it mean container run in back gournd.
+29.		
+	
+
+						
